@@ -33,7 +33,6 @@ import com.datastax.driver.core.exceptions.InvalidConfigurationInQueryException;
 import com.datastax.driver.core.exceptions.InvalidQueryException;
 import com.datastax.driver.core.exceptions.InvalidTypeException;
 import com.datastax.driver.core.exceptions.QueryExecutionException;
-import com.datastax.driver.core.exceptions.QueryTimeoutException;
 import com.datastax.driver.core.exceptions.QueryValidationException;
 import com.datastax.driver.core.exceptions.ReadTimeoutException;
 import com.datastax.driver.core.exceptions.SyntaxError;
@@ -212,7 +211,6 @@ public class CassandraCqlMapState<T> implements IBackingMap<T> {
                 e instanceof InvalidQueryException ||
                 e instanceof InvalidTypeException ||
                 e instanceof QueryExecutionException ||
-                e instanceof QueryTimeoutException ||
                 e instanceof QueryValidationException ||
                 e instanceof ReadTimeoutException ||
                 e instanceof SyntaxError ||
